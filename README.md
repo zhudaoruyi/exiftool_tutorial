@@ -5,9 +5,10 @@
 The Image::ExifTool library provides an extensible set of Perl modules to read and write meta information in a wide variety of image, audio and video files.
 
 ## `Exiftool`的安装
-- Ubuntu 16.04的安装
+- 在Ubuntu 16.04上的安装
     - 1.*Download* the *Image-ExifTool* distribution from the [ExifTool home page](https://sno.phy.queensu.ca/~phil/exiftool/index.html)
 (The file you download should be named `Image-ExifTool-11.25.tar.gz`.)
+
     - 2.*Unpack the distribution* and *make it your current directory* by typing:
 ```bash
 cd <your download directory>
@@ -15,6 +16,7 @@ gzip -dc Image-ExifTool-11.25.tar.gz | tar -xf -
 cd Image-ExifTool-11.25
 ```
 (At this point you may run exiftool by typing`./exiftool <image file name>` .)
+
     - 3.*Test and install ExifTool* by typing:
 ```bash
 perl Makefile.PL
