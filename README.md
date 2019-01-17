@@ -2,20 +2,20 @@
 [TOC]
 
 ## `Exiftool`的简介
-
+The Image::ExifTool library provides an extensible set of Perl modules to read and write meta information in a wide variety of image, audio and video files.
 
 ## `Exiftool`的安装
 - Ubuntu 16.04的安装
-- 1. *Download* the *Image-ExifTool* distribution from the [ExifTool home page](https://sno.phy.queensu.ca/~phil/exiftool/index.html)
+    - 1.*Download* the *Image-ExifTool* distribution from the [ExifTool home page](https://sno.phy.queensu.ca/~phil/exiftool/index.html)
 (The file you download should be named `Image-ExifTool-11.25.tar.gz`.)
--    2.*Unpack the distribution* and *make it your current directory* by typing:
+    - 2.*Unpack the distribution* and *make it your current directory* by typing:
 ```bash
 cd <your download directory>
 gzip -dc Image-ExifTool-11.25.tar.gz | tar -xf -
 cd Image-ExifTool-11.25
 ```
 (At this point you may run exiftool by typing`./exiftool <image file name>` .)
--    3.*Test and install ExifTool* by typing:
+    - 3.*Test and install ExifTool* by typing:
 ```bash
 perl Makefile.PL
 make test
@@ -35,7 +35,7 @@ man Image::ExifTool
 man Image::ExifTool::TagNames
 ```
 
-## Reference
+### Reference
 - [https://sno.phy.queensu.ca/~phil/exiftool/install.html#Unix](https://sno.phy.queensu.ca/~phil/exiftool/install.html#Unix)
 
 ## `Exiftool`提取图片的Tag信息
@@ -51,7 +51,8 @@ exiftool -FlightPitchDegree=1.526 -FlightRollDegree=24.631 -FlightYawDegree=-275
 
 ## `Exiftool`添加自定义的Tag信息
 - 步骤
-For examples of how to add user-defined tags, see the ExifTool_config file in the ExifTool distribution. To activate this file, rename it to `.ExifTool_config` and copy it to your HOME directory. With this installed, you should be able to write and read the example tags (such as `NewXMPxxxTag1`). Try this first before you attempt to define your own tags.
+
+    - For examples of how to add user-defined tags, see the ExifTool_config file in the ExifTool distribution. To activate this file, rename it to `.ExifTool_config` and copy it to your HOME directory. With this installed, you should be able to write and read the example tags (such as `NewXMPxxxTag1`). Try this first before you attempt to define your own tags.
 If this doesn't work, the most common problem is that the `.ExifTool_config` configuration file isn't getting loaded properly, and there are two things you can try: 1) Set either the HOME or the EXIFTOOL_HOME environment variable to the name of the directory where you put your `.ExifTool_config` file, or 2) put the config file in the same directory as the exiftool script. (Also, be sure the config filename starts with a dot! In the Windows GUI you may be not be able to generate a file name that starts with a `.`, but it can be done from the command line using the `rename` command.)
 If necessary, you can verify that ExifTool is loading your config file by adding the following line to your file:
 print "LOADED!\n";
